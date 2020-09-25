@@ -1,0 +1,95 @@
+.sidenav{
+  
+    height: 954px;
+    width: 320px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    
+    background-color: #2D2B2B;
+}
+
+.sidenav a {
+
+    color: white;
+}
+
+.sidenav i{ 
+
+    padding-right: 10px;
+}
+
+h1, p {
+
+    font-family: 'Patrick Hand', cursive;
+}
+
+.crud{
+
+    position: absolute;
+    left: 31.42%;
+    right: 31.72%;
+    top: 4.61%;
+    bottom: 89.1%;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 58px;
+    line-height: 79px;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+}
+
+.button-new-warning{
+
+    font-family: 'Patrick Hand';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 41px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: #000000;
+    
+    position: absolute;
+    
+    height: 65px;
+    width: 269px;
+    left: 26px;
+    top: 188px;
+    border-radius: 60px;
+
+    background: #C4C4C4;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 60px;
+}
+button i{
+    
+    height: 50px;
+    border-radius: 0px;
+    font-size: 46px;
+    
+    color:white;
+}
+
+.home-hr{
+
+    border: 1px solid #000000;
+    margin-top: 750px;
+}
+
+.links p{
+
+    margin-left: 25px;
+    margin-top: 15px;
+    font-size: 25px;
+    line-height: 34px;
+
+    color: white;
+}
