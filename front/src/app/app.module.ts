@@ -11,6 +11,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { CardListComponent } from './views/card-list/card-list.component';
 import { CardComponent } from './views/card-list/card/card.component';
 import {MatCardModule} from '@angular/material/card';
+import { TextAreaComponent } from './views/text-area/text-area.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {MatCardModule} from '@angular/material/card';
     AppComponent,
     HomeComponent,
     CardListComponent,
-    CardComponent
+    CardComponent,
+    TextAreaComponent
   ],
   imports: [
     BrowserModule,

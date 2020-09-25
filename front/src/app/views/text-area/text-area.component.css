@@ -1,0 +1,63 @@
+.sidenav{
+  
+    width: 1280px;
+    height: 954px;
+    left: 643px;
+    top: 0px;
+
+    background-color: #E8E8E8;
+}
+
+.title{
+
+    font-family: 'Patrick Hand', cursive;
+    position: absolute;
+    left: 8.91%;
+    right: 76.29%;
+    top: 5.77%;
+    bottom: 87.95%;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 58px;
+    line-height: 79px;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+p{
+  
+    font-family: 'Patrick Hand', cursive;
+    position: absolute;
+    left: 8.91%;
+    right: 13.3%;
+    top: 14.78%;
+    bottom: 78.93%;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 47px;
+}
+
+.paragraph{
+
+    font-family: 'Patrick Hand', cursive;
+    position: absolute;
+    left: 8.91%;
+    right: 13.3%;
+    top: 14.78%;
+    bottom: 78.93%;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 47px;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+
+

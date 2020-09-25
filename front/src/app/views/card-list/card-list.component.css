@@ -8,16 +8,6 @@
     background-color: #C4C4C4;
 }
 
-.sidenav a {
-
-    color: white;
-}
-
-.sidenav i{ 
-
-    padding-right: 10px;
-}
-
 .title{
     
     position: absolute;
@@ -26,6 +16,7 @@
     top: 4.61%;
     bottom: 89.1%;
     
+    font-family: 'Patrick Hand', cursive;
     font-style: normal;
     font-weight: normal;
     font-size: 45px;
@@ -43,7 +34,7 @@ p{
     top: 13.31%;
     bottom: 83.54%;
 
-    font-family: Patrick Hand;
+    font-family: 'Patrick Hand', cursive;
     font-style: normal;
     font-weight: normal;
     font-size: 25px;
@@ -54,11 +45,7 @@ p{
     backdrop-filter: blur(4px);
 }
 
-h2, p {
-
-    font-family: 'Patrick Hand', cursive;
-}
-
 hr{
+    
     margin-top: 160px;
 }

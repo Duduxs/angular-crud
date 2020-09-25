@@ -1,18 +1,35 @@
 mat-card{
+    
     background-color: #C4C4C4;
 }
 
 mat-card-subtitle{
+
     margin-left: -55px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 15px;
+}
+
+mat-card-subtitle i{
+
+    vertical-align: middle;
+
 }
 
 mat-card-title{
+
     padding-bottom: 10px;
+    font-family: 'Patrick Hand', cursive;
+    font-weight: bold;
 }
 
+
 .description{
+
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 200px;
-  }
+    font-family: 'Patrick Hand', cursive;
+    font-size: 15px;
+}
