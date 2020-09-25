@@ -1,0 +1,18 @@
+mat-card{
+    background-color: #C4C4C4;
+}
+
+mat-card-subtitle{
+    margin-left: -55px;
+}
+
+mat-card-title{
+    padding-bottom: 10px;
+}
+
+.description{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+  }

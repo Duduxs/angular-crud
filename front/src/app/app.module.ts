@@ -8,12 +8,17 @@ import { HomeComponent } from './views/home/home.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
+import { CardListComponent } from './views/card-list/card-list.component';
+import { CardComponent } from './views/card-list/card/card.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    CardListComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +26,8 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     MatSidenavModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
