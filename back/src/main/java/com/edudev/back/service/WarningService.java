@@ -1,10 +1,11 @@
 package com.edudev.back.service;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.edudev.back.exceptions.IdNotFound;
@@ -22,11 +23,12 @@ public class WarningService {
 		return warning.orElseThrow(() -> new IdNotFound("Id not found"));
 	}
 	
-	public List<Warning> findAll(){
-		return warningRepository.findAll();
-	}
-	
-	public Warning save(Warning warning) {
+	public Page<Warning> findAll(Pageable pageable){
+
+	        return warningRepository.findAll(pageable);
+	    }
+
+		public Warning save(Warning warning) {
 		warning.setPublicationDate(LocalDateTime.now());
 		return warningRepository.save(warning);
 	}

@@ -1,8 +1,10 @@
 package com.edudev.back.resource;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -25,10 +27,11 @@ public class WarningResource {
 
 	@Autowired
 	WarningService warningService;
-	
+
+	    
 	@GetMapping
-	public ResponseEntity<List<Warning>> findAll() {
-		return new ResponseEntity<List<Warning>>(warningService.findAll(), HttpStatus.OK);
+	public ResponseEntity<Page<Warning>> findAll(@PageableDefault(page = 0, size = 3, sort = "id", direction = Sort.Direction.ASC) Pageable pageable){
+		return new ResponseEntity<Page<Warning>>(warningService.findAll(pageable), HttpStatus.OK);
 	}
 	
 	@PostMapping
