@@ -27,12 +27,30 @@
     backdrop-filter: blur(4px);
 }
 
-p{
+
+i{
+    
+    height: 50px;
     position: absolute;
-    left: 11.88%;
-    right: 58.12%;
+    top: 12.61%;
+    border-radius: 0px;
+    font-size: 46px;
+    
+    color:white;
+}
+
+i:hover{
+    
+    cursor: pointer;
+}
+
+p{
+
+    position: absolute;
+    margin-left: 200px;
     top: 13.31%;
     bottom: 83.54%;
+
 
     font-family: 'Patrick Hand', cursive;
     font-style: normal;

@@ -3,15 +3,16 @@
         <mat-nav-list>
 
             <h2 class='title'>My Warnings</h2>
+                <i class="material-icons" (click)="addComponent(cardComponentClass)">add</i>
             <p>9 warnings</p>
             <hr class='home-hr'>
+   
             <div>
-                <app-card></app-card>
-                <app-card></app-card>
-                <app-card></app-card>
-                <app-card></app-card>
+       
+                <ng-template #container> </ng-template>
                 <app-card></app-card>
             </div>
+            
             
         </mat-nav-list>
     </mat-sidenav>
