@@ -1,6 +1,6 @@
 
 export class Warning{
-    id: Number;
+    id: number;
     title: string;
     description: string;
     publicationDate: string;

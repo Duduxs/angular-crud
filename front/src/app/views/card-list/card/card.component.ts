@@ -1,4 +1,5 @@
 import { Component, ComponentFactoryResolver, OnInit} from '@angular/core';
+import * as moment from 'moment';
 import { Warning } from 'src/app/shared/model/warning.model';
 import { WarningService } from 'src/app/shared/service/warning.service';
 
@@ -11,6 +12,7 @@ export class CardComponent implements OnInit {
 
   public show : boolean = false;
   warnings: Warning[];
+
   
   constructor(public warningService: WarningService) {   
     }
@@ -19,12 +21,15 @@ export class CardComponent implements OnInit {
     this.getLives();
   }
 
-  showData(){
-    let newDate: moment.Moment;
-    console.log(newDate);
-    this.warnings[0]
-    this.show = true;
+  showData(id:number){
+    const now = moment().format('YYYY-MM-DD'+'T'+'hh:mm:ss');
+ 
+    this.warnings[id].visualizationDate = now;
 
+    console.log(this.warnings[id]);
+    if(this.warnings[id].visualizationDate != null){
+    this.show = true;
+    }
   }
 
   

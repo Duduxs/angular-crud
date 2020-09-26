@@ -30,7 +30,7 @@ public class WarningResource {
 
 	    
 	@GetMapping
-	public ResponseEntity<Page<Warning>> findAll(@PageableDefault(page = 0, size = 3, sort = "id", direction = Sort.Direction.ASC) Pageable pageable){
+	public ResponseEntity<Page<Warning>> findAll(@PageableDefault(page = 0, size = Integer.MAX_VALUE, sort = "id", direction = Sort.Direction.ASC) Pageable pageable){
 		return new ResponseEntity<Page<Warning>>(warningService.findAll(pageable), HttpStatus.OK);
 	}
 	
