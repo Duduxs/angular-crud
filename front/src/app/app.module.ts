@@ -12,6 +12,8 @@ import { CardListComponent } from './views/card-list/card-list.component';
 import { CardComponent } from './views/card-list/card/card.component';
 import {MatCardModule} from '@angular/material/card';
 import { TextAreaComponent } from './views/text-area/text-area.component';
+import { LocalDateTimePipe } from './shared/pipe/pipe.pipe';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -20,9 +22,11 @@ import { TextAreaComponent } from './views/text-area/text-area.component';
     HomeComponent,
     CardListComponent,
     CardComponent,
-    TextAreaComponent
+    TextAreaComponent,
+    LocalDateTimePipe
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
