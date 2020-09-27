@@ -1,23 +1,23 @@
 <ng-container *ngFor="let warning of warnings">
-<mat-card class="example-card" (click)="showData(warning.id -1)">
+  <mat-card class="example-card" (click)="showData(warning.id -1)">
+    
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{warning.title}}</mat-card-title>
+        <mat-card-subtitle *ngIf="show && warning.visualizationDate != null"><i class="material-icons">done</i>{{warning.publicationDate}}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="show && warning.visualizationDate != null"><i class="material-icons">visibility</i>{{warning.visualizationDate}}</mat-card-subtitle>
+      </mat-card-header>
   
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{warning.title}}</mat-card-title>
-      <mat-card-subtitle *ngIf="show && warning.visualizationDate != null"><i class="material-icons">done</i>{{warning.publicationDate}}</mat-card-subtitle>
-      <mat-card-subtitle *ngIf="show && warning.visualizationDate != null"><i class="material-icons">visibility</i>{{warning.visualizationDate}}</mat-card-subtitle>
-    </mat-card-header>
-
-    <mat-card-content>
-      <p class='description'>
-      {{warning.description}}
-      </p>
-    </mat-card-content>
-
-    <mat-card-actions>
-      <button mat-button>EDIT</button>
-      <button mat-button>REMOVE</button>
-    </mat-card-actions>
-
-</mat-card>
+      <mat-card-content>
+        <p class='description'>
+        {{warning.description}}
+        </p>
+      </mat-card-content>
+  
+      <mat-card-actions>
+        <button mat-button>EDIT</button>
+        <button mat-button>REMOVE</button>
+      </mat-card-actions>
+  
+  </mat-card>
 </ng-container>

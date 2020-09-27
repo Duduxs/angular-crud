@@ -1,42 +1,54 @@
-import { Component, ComponentFactoryResolver, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
+import { GlobalVariable } from 'src/app/shared/global-variables';
 import { Warning } from 'src/app/shared/model/warning.model';
 import { WarningService } from 'src/app/shared/service/warning.service';
+import { TextAreaComponent } from '../../text-area/text-area.component';
+
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
+
 export class CardComponent implements OnInit {
 
-  public show : boolean = false;
+  public show: boolean = false;
   warnings: Warning[];
 
-  
-  constructor(public warningService: WarningService) {   
-    }
+  textarea : TextAreaComponent = new TextAreaComponent();
+
+  constructor(public warningService: WarningService) {
+  }
+
 
   ngOnInit(): void {
-    this.getLives();
+    this.getWarnings();
+
   }
 
-  showData(id:number){
-    const now = moment().format('YYYY-MM-DD'+'T'+'hh:mm:ss');
- 
+  showData(id: number) {
+    const now = moment().format('YYYY-MM-DD' + 'T' + 'hh:mm:ss');
+  
     this.warnings[id].visualizationDate = now;
 
+    GlobalVariable.warningTitle = this.warnings[id].title;
+    GlobalVariable.warningDescription = this.warnings[id].description;
+    GlobalVariable.warningVisualizationDate = this.warnings[id].visualizationDate;
+
+
     console.log(this.warnings[id]);
-    if(this.warnings[id].visualizationDate != null){
     this.show = true;
-    }
   }
 
   
-  getLives(){
-    this.warningService.getWarnings().subscribe(data =>{
+  getWarnings() {
+    this.warningService.getWarnings().subscribe(data => {
       this.warnings = data.content;
-      console.log(this.warnings);
     })
   }
 }
+
+
+

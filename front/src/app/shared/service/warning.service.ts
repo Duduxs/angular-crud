@@ -8,6 +8,7 @@ import { Pageable } from '../model/pageable.model';
 })
 export class WarningService {
 
+ 
   apiUrl='http://localhost:8080/warnings';
 
   httpOptions = {
@@ -24,4 +25,5 @@ export class WarningService {
   public getWarnings(): Observable<Pageable>{
     return this.httpClient.get<Pageable>(this.apiUrl);
   }
+
 }
