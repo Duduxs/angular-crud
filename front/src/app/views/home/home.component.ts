@@ -1,7 +1,9 @@
 import { Component, OnInit} from '@angular/core';
 import * as moment from 'moment';
+import { GlobalVariable } from 'src/app/shared/global-variables';
 import { Warning } from 'src/app/shared/model/warning.model';
 import { WarningService } from 'src/app/shared/service/warning.service';
+import { CardComponent } from '../card-list/card/card.component';
 
 
 @Component({
@@ -26,7 +28,7 @@ export class HomeComponent implements OnInit {
 
     postWarning(): void{
       this.warningService.postWarning(this.warning).subscribe((data) =>{
-        console.log(data);
+       
       });
       window.location.reload();
     }

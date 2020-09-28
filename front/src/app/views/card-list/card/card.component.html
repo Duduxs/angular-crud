@@ -1,9 +1,9 @@
 <ng-container *ngFor="let warning of warnings">
-  <mat-card class="example-card" (click)="showData(warning.id -1)">
+  <mat-card class="example-card" (click)="showData(warning)">
     
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title (click)="findById(warning.id)">{{warning.title}}</mat-card-title>
+        <mat-card-title>{{warning.title}}</mat-card-title>
         <mat-card-subtitle *ngIf="show && warning.visualizationDate != null"><i class="material-icons">done</i>{{warning.publicationDate}}</mat-card-subtitle>
         <mat-card-subtitle *ngIf="show && warning.visualizationDate != null"><i class="material-icons">visibility</i>{{warning.visualizationDate}}</mat-card-subtitle>
       </mat-card-header>

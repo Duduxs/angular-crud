@@ -14,7 +14,7 @@ import { WarningService } from 'src/app/shared/service/warning.service';
 export class CardComponent implements OnInit {
 
   public show: boolean = false;
-  warnings: Warning[];
+  public warnings: Warning[];
   warning: Warning;
 
   constructor(public warningService: WarningService) {
@@ -24,14 +24,16 @@ export class CardComponent implements OnInit {
     this.getWarnings();
   }
 
-  showData(id: number) {
+  showData(warning: Warning) {
+   
+    let index = this.warnings.indexOf(warning);
+   
     const now = moment().format('YYYY-MM-DD' + 'T' + 'hh:mm:ss');
-  
-    this.warnings[id].visualizationDate = now;
+    this.warnings[index].visualizationDate = now;
 
-    GlobalVariable.warningTitle = this.warnings[id].title;
-    GlobalVariable.warningDescription = this.warnings[id].description;
-    GlobalVariable.warningVisualizationDate = this.warnings[id].visualizationDate;
+    GlobalVariable.warningTitle = this.warnings[index].title;
+    GlobalVariable.warningDescription = this.warnings[index].description;
+    GlobalVariable.warningVisualizationDate = this.warnings[index].visualizationDate;
 
 
     this.show = true;
@@ -53,10 +55,11 @@ export class CardComponent implements OnInit {
     this.findById(id);
     const index = this.warnings.indexOf(this.warning);
     this.warnings.splice(index,1);
-
+    console.log(this.warnings);
     this.warningService.deleteWarning(id).subscribe(() =>{
-     
+   
     });
+
   }
 
 }
