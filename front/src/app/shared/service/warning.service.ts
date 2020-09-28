@@ -21,6 +21,10 @@ export class WarningService {
     private httpClient: HttpClient
   ) { }
 
+  public findByid(id: number): Observable<Warning>{
+    return this.httpClient.get<Warning>(`${this.apiUrl}/${id}`);
+  }
+
   public postWarning(warning: Warning): Observable<Warning>{
     return this.httpClient.post<Warning>(this.apiUrl, warning);
   }
@@ -33,8 +37,8 @@ export class WarningService {
      return this.httpClient.put<void>(`${this.apiUrl}/${id}`, warning);
   }
 
-  public deleteWarning(id: number): void{
-     this.httpClient.delete<void>(`${this.apiUrl}/${id}`)
+  public deleteWarning(id: number): Observable<Warning>{
+    return this.httpClient.delete<Warning>(`${this.apiUrl}/${id}`)
   }
 
 }

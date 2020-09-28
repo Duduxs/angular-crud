@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
+import { Observable } from 'rxjs/internal/Observable';
 import { GlobalVariable } from 'src/app/shared/global-variables';
 import { Warning } from 'src/app/shared/model/warning.model';
 import { WarningService } from 'src/app/shared/service/warning.service';
@@ -14,6 +15,7 @@ export class CardComponent implements OnInit {
 
   public show: boolean = false;
   warnings: Warning[];
+  warning: Warning;
 
   constructor(public warningService: WarningService) {
   }
@@ -31,9 +33,15 @@ export class CardComponent implements OnInit {
     GlobalVariable.warningDescription = this.warnings[id].description;
     GlobalVariable.warningVisualizationDate = this.warnings[id].visualizationDate;
 
-    console.log(this.warnings[id]);
+
     this.show = true;
   }
+
+  findById(id: number){
+    this.warningService.findByid(id).subscribe(data =>{
+      this.warning = data;
+    })
+    }
 
   getWarnings() {
     this.warningService.getWarnings().subscribe(data => {
@@ -41,13 +49,14 @@ export class CardComponent implements OnInit {
     })
   }
 
-  updateWarning(id: number){
-   // this.warningService.updateWarnings(id, this.warning);
-  }
-
   deleteWarning(id: number){
-    this.warningService.deleteWarning(id);
-    console.log(id);
+    this.findById(id);
+    const index = this.warnings.indexOf(this.warning);
+    this.warnings.splice(index,1);
+
+    this.warningService.deleteWarning(id).subscribe(() =>{
+     
+    });
   }
 
 }

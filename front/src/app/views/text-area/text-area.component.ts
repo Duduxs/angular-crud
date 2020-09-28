@@ -9,19 +9,19 @@ import { GlobalVariable } from 'src/app/shared/global-variables';
 })
 
 export class TextAreaComponent implements OnInit {
-
-  public title: string = "";
-  public description: string = "";
+    
+  public title: string = GlobalVariable.warningTitle;
+  public description: string = GlobalVariable.warningDescription;
 
   constructor() { }
 
-  clicked(){
-   this.title = GlobalVariable.warningTitle;
-   this.description = GlobalVariable.warningDescription;
-  }
 
   ngOnInit(): void {
 
+  }
+  clicked(){
+    this.title = GlobalVariable.warningTitle;
+    this.description = GlobalVariable.warningDescription;
   }
 
 }

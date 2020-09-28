@@ -1,4 +1,4 @@
-<mat-sidenav-container>
+<mat-sidenav-container (click)="clicked()">
     <mat-sidenav class="sidenavText" mode="side" opened fixedInViewport="true">
         <mat-nav-list>
 
@@ -13,7 +13,7 @@
             value="" 
             size="50"
             [value]='description'
-            (click)="clicked()">
+            >
         </textarea>
       
         </mat-nav-list>

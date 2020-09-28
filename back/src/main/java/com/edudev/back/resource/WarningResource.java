@@ -7,7 +7,6 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,13 +21,16 @@ import com.edudev.back.service.WarningService;
 
 @RestController
 @RequestMapping("/warnings")
-@CrossOrigin(origins = "*")
 public class WarningResource {
 
 	@Autowired
 	WarningService warningService;
 
- 
+	@GetMapping(value="/{id}")
+	public ResponseEntity<Warning> findById(@PathVariable Long id){
+		return new ResponseEntity<Warning>(warningService.findById(id), HttpStatus.OK);
+	}
+	
 	@GetMapping
 	public ResponseEntity<Page<Warning>> findAll(@PageableDefault(page = 0, size = Integer.MAX_VALUE, sort = "id", direction = Sort.Direction.ASC) Pageable pageable){
 		return new ResponseEntity<Page<Warning>>(warningService.findAll(pageable), HttpStatus.OK);
