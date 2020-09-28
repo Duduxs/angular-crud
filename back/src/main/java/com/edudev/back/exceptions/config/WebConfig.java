@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Component;
 
+//Cors config for all methods
 @Component
 public class WebConfig implements Filter {
 

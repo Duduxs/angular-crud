@@ -1,5 +1,5 @@
 <ng-container *ngFor="let warning of warnings">
-  <mat-card class="example-card" (click)="showData(warning)">
+  <mat-card class="example-card" (click)="showData(warning)" >
     
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
@@ -15,7 +15,7 @@
       </mat-card-content>
   
       <mat-card-actions>
-        <button mat-button>EDIT</button>
+        <button mat-button (click)="updateWarning(warning.id)">EDIT</button>
         <button mat-button (click)="deleteWarning(warning.id)">REMOVE</button>
       </mat-card-actions>
   

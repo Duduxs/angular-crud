@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { GlobalVariable } from 'src/app/shared/global-variables';
 
 @Component({
   selector: 'app-card-list',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardListComponent implements OnInit {
 
+  @Input() warnings: number = 0;
+
   constructor() { }
 
-  ngOnInit(): void {
-
+  change() {
+    this.warnings = GlobalVariable.totalWarnings;
   }
+
+  ngOnInit(): void { }
 }

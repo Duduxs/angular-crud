@@ -1,10 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import * as moment from 'moment';
-import { GlobalVariable } from 'src/app/shared/global-variables';
 import { Warning } from 'src/app/shared/model/warning.model';
 import { WarningService } from 'src/app/shared/service/warning.service';
-import { CardComponent } from '../card-list/card/card.component';
-
 
 @Component({
   selector: 'app-home',
@@ -12,7 +9,7 @@ import { CardComponent } from '../card-list/card/card.component';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  
+  //Model Warning
   warning: Warning = {
     id: null,
     title: 'Title',
@@ -23,13 +20,12 @@ export class HomeComponent implements OnInit {
 
    constructor(public warningService: WarningService) { }
 
-    ngOnInit(): void {
-    }
+    ngOnInit(): void { }
 
+    //Post an empty warning
     postWarning(): void{
-      this.warningService.postWarning(this.warning).subscribe((data) =>{
-       
-      });
+      
+      this.warningService.postWarning(this.warning).subscribe((data) =>{});
       window.location.reload();
     }
 }

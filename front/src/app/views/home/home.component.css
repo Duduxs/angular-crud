@@ -11,6 +11,8 @@
 
 .crud{
 
+    font-family: 'Patrick Hand', cursive;
+
     position: absolute;
     left: 31.42%;
     right: 31.72%;
@@ -30,6 +32,7 @@
 
 .button-new-warning{
 
+    font-family: 'Patrick Hand', cursive;
     
     font-size: 30px;
     font-style: normal;
@@ -61,6 +64,8 @@
 }
 
 i{
+
+    padding-right: 10px;
     
     position: absolute;
     height: 50px;
@@ -70,6 +75,7 @@ i{
     
     color:white;
 }
+
 
 span{
     position: relative;
@@ -85,27 +91,14 @@ span{
 
 .links p{
 
+    font-family: 'Patrick Hand', cursive;
+
     margin-left: 25px;
     margin-top: 15px;
     font-size: 25px;
     line-height: 34px;
 
     color: white;
-}
-
-.sidenav a {
-
-    color: white;
-}
-
-.sidenav i{ 
-
-    padding-right: 10px;
-}
-
-h1, p , .button-new-warning{
-
-    font-family: 'Patrick Hand', cursive;
 }
 
 

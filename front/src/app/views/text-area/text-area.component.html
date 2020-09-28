@@ -1,21 +1,22 @@
-<mat-sidenav-container (click)="clicked()">
+<mat-sidenav-container (click)="clicked()" (mouseleave)="mouseleave()" (mouseenter)="mouseenter()">
     <mat-sidenav class="sidenavText" mode="side" opened fixedInViewport="true">
         <mat-nav-list>
 
-            <input type="text" name="title" class='inputTitle' placeholder="title" readonly="true" [value]='title' (click)="clicked()">
+            <input type="text" name="title" class='inputTitle' placeholder="title"
+             [value]='title' #inputText (keyup)="onKey(inputText.value)" [hidden]='inputHidden'>
             <textarea 
             name="paragraph" 
             class='paragraph'
             placeholder="Begin to write your warning description here" 
-            readonly="true"
             cols="30"
             rows="10" 
-            value="" 
+            [value]="description" 
+            #textArea (keyup)="onKeyDescription(textArea.value)"
+            [hidden]='inputHidden'
             size="50"
-            [value]='description'
             >
+            
         </textarea>
-      
         </mat-nav-list>
     </mat-sidenav>
 </mat-sidenav-container>
