@@ -15,8 +15,8 @@
 </p>
 
 <p align="center">
-<img alt="Collage" src="https://ik.imagekit.io/27ewoxssse/collagem_SDS_LqGt8iNnX.png"> 
-<img alt="Gif" src="https://ik.imagekit.io/27ewoxssse/firstPhoto_dUy8ANFEf.jpg"> 
+<img alt="Collage" src="https://ik.imagekit.io/27ewoxssse/firstPhoto_dUy8ANFEf.jpg"> 
+<img alt="Gif" src="https://ik.imagekit.io/27ewoxssse/gif-readme_CaTEC0SoV.gif"> 
 </p>
 
 ## :rocket: Technologies
