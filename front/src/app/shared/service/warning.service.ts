@@ -9,7 +9,6 @@ import { Warning } from '../model/warning.model';
 })
 export class WarningService {
 
- 
   apiUrl='http://localhost:8080/warnings';
 
   httpOptions = {

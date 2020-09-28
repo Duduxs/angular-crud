@@ -3,8 +3,6 @@ import * as moment from 'moment';
 import { GlobalVariable } from 'src/app/shared/global-variables';
 import { Warning } from 'src/app/shared/model/warning.model';
 import { WarningService } from 'src/app/shared/service/warning.service';
-import { TextAreaComponent } from '../../text-area/text-area.component';
-
 
 @Component({
   selector: 'app-card',
@@ -17,12 +15,8 @@ export class CardComponent implements OnInit {
   public show: boolean = false;
   warnings: Warning[];
 
-
-  textarea : TextAreaComponent = new TextAreaComponent();
-
   constructor(public warningService: WarningService) {
   }
-
 
   ngOnInit(): void {
     this.getWarnings();
@@ -37,13 +31,9 @@ export class CardComponent implements OnInit {
     GlobalVariable.warningDescription = this.warnings[id].description;
     GlobalVariable.warningVisualizationDate = this.warnings[id].visualizationDate;
 
-
     console.log(this.warnings[id]);
     this.show = true;
-  
   }
-
- 
 
   getWarnings() {
     this.warningService.getWarnings().subscribe(data => {

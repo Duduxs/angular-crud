@@ -27,23 +27,6 @@
     backdrop-filter: blur(4px);
 }
 
-
-i{
-    
-    height: 50px;
-    position: absolute;
-    top: 12.61%;
-    border-radius: 0px;
-    font-size: 46px;
-    
-    color:white;
-}
-
-i:hover{
-    
-    cursor: pointer;
-}
-
 p{
 
     position: absolute;
