@@ -17,6 +17,7 @@ export class CardComponent implements OnInit {
   public show: boolean = false;
   warnings: Warning[];
 
+
   textarea : TextAreaComponent = new TextAreaComponent();
 
   constructor(public warningService: WarningService) {
@@ -25,7 +26,6 @@ export class CardComponent implements OnInit {
 
   ngOnInit(): void {
     this.getWarnings();
-
   }
 
   showData(id: number) {
@@ -40,14 +40,26 @@ export class CardComponent implements OnInit {
 
     console.log(this.warnings[id]);
     this.show = true;
+  
   }
 
-  
+ 
+
   getWarnings() {
     this.warningService.getWarnings().subscribe(data => {
       this.warnings = data.content;
     })
   }
+
+  updateWarning(id: number){
+   // this.warningService.updateWarnings(id, this.warning);
+  }
+
+  deleteWarning(id: number){
+    this.warningService.deleteWarning(id);
+    console.log(id);
+  }
+
 }
 
 

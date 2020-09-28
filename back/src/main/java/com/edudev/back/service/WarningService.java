@@ -1,7 +1,6 @@
 package com.edudev.back.service;
 
 import java.time.LocalDateTime;
-import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
@@ -37,7 +36,7 @@ public class WarningService {
 		warning.setPublicationDate(LocalDateTime.parse(dateNow));
 		return warningRepository.save(warning);
 	}
-
+	
 	public void update(Warning warning, Long id) {
 		Warning w = findById(id);
 		w.setTitle(warning.getTitle());
